@@ -674,7 +674,7 @@ Consequently `coder-review-d6/7` and not `phpcs` is used for the main targets.
                     --report-file=${project.logdir}/checkstyle-codesniffer.xml
                     --standard=${project.toolsdir}/drupalcs/ruleset.xml
                     --extensions=php,inc
-                    --ignore=*/contrib/*,*/*.features.*,*/*.field_group.inc,*/*.layout.*,*/*.pages_default.*,*/*.panels_default.*,*/*strongarm.inc,*/*.views_default.inc
+                    --ignore=*/contrib/*,*/*.features.*,*/*.field_group.inc,*/*.layout.*,*/*.pages_default.*,*/*.panels_default.*,*/*strongarm.inc,*/*.views_default.inc,*/*.linkit_profiles.inc,*/*.features.field.inc,*/*.context.inc,*/*.ds.inc,*/*.migrate.inc,*/*.file_default_displays.inc,*/*.quicktabs.inc,*/*.context.inc,*/*.box.inc
                     ${project.sitesdir}"
             logoutput="true" />
     </target>
@@ -743,7 +743,7 @@ Execution of this target can be skipped by setting the
         <echo msg="You must set the drupal.uri property to get simpletests working." />
       </else>
     </if>
-    
+
   </target>
 
 <!-- ### Generate documentation -->
@@ -1047,6 +1047,15 @@ called from `init` target. -->
       <exclude name="**/*.panels_default.inc" />
       <exclude name="**/*.strongarm.inc" />
       <exclude name="**/*.views_default.inc" />
+      <exclude name="**/*.linkit_profiles.inc" />
+      <exclude name="**/*.features.field.inc" />
+      <exclude name="**/*.context.inc" />
+      <exclude name="**/*.ds.inc" />
+      <exclude name="**/*.migrate.inc" />
+      <exclude name="**/*.file_default_displays.inc" />
+      <exclude name="**/*.quicktabs.inc" />
+      <exclude name="**/*.context.inc" />
+      <exclude name="**/*.box.inc" />
     </patternset>
 
     <!-- Define file sets for future reference -->
